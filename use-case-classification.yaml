@@ -1,0 +1,54 @@
+# Governance-as-Code — AI use-case record & classification (EXAMPLE / TEMPLATE)
+# Vendor-neutral. No client, partner or product data. Fill and version-control per use case.
+
+apiVersion: rai-governance/v1
+kind: AIUseCase
+
+metadata:
+  use_case_id: UC-0001            # stable identifier that links the whole evidence chain
+  name: "Test case & script generation"
+  phase: build                     # build | run
+  owner: "role:delivery-lead"      # accountable human owner (use roles, not names)
+  status: proposed                 # proposed | classified | governed | live | retired
+
+description: >
+  Generative/agentic assistant that produces functional and integration test cases and
+  scripts from approved requirements, feeding validated inputs into the delivery pipeline.
+
+ai_profile:
+  pattern: generative              # generative | agentic | hybrid
+  autonomy: light-agentic          # human-in-command | in-the-loop | on-the-loop | out-of-the-loop
+  decision_influence: low          # low | medium | high
+  data_classes: [engineering-artefacts]   # avoid PII where possible; declare if present
+
+classification:
+  method: risk-tiering
+  risk_tier: limited               # minimal | limited | high | unacceptable (EU AI Act style)
+  rationale: >
+    Assists engineering; no automated decisions affecting customers; human review before use.
+  memo_ref: "evidence://UC-0001/classification-memo"
+
+trust_controls:
+  accountability: "Named delivery-lead signs off generated tests before merge."
+  fairness: "N/A for this use case; no customer-affecting decisions."
+  security: "Runs in secured pipeline; bounded permissions; secrets excluded from prompts."
+  privacy: "No personal data in prompts or outputs; enforced by pre-commit checks."
+  transparency: "AI-generated artefacts tagged; provenance and rationale traceable."
+  human_oversight: "Human review & sign-off gate before release."
+  reversibility: "Version control + rollback; immutable logs of generation events."
+
+evidence_chain:
+  trust_card:       "evidence://UC-0001/trust-card"
+  classification:   "evidence://UC-0001/classification-memo"
+  control_plan:     "evidence://UC-0001/control-plan"
+  build_evidence:   "evidence://UC-0001/coverage-report"
+  run_evidence:     null
+  reporting:        "evidence://UC-0001/board-supervisory-index"
+  store: "WORM"                    # write-once-read-many immutable repository
+
+lifecycle_gates:
+  - design
+  - pre-test
+  - pre-release
+  - material-change
+  - retirement
