@@ -1,0 +1,45 @@
+# Governance-as-Code — Control-to-framework mapping (EXAMPLE / TEMPLATE)
+# One control system, many evidence views. Map each control to the public frameworks it satisfies.
+
+apiVersion: rai-governance/v1
+kind: ControlMapping
+
+metadata:
+  control_id: CTL-HUMAN-OVERSIGHT-01
+  name: "Human oversight & sign-off gate before release"
+  layer: operational               # strategic | functional | technical | operational
+  owner: "role:ai-governance"
+
+intent: >
+  Ensure a competent human reviews and approves AI-generated or AI-assisted outputs before they
+  reach production, proportionate to risk tier and autonomy.
+
+applies_to_risk_tier: [limited, high]
+
+framework_mappings:
+  - framework: "ISO/IEC 42001"
+    reference: "AIMS operational controls / human oversight"
+    evidence: "evidence://controls/CTL-HUMAN-OVERSIGHT-01/signoff-records"
+  - framework: "EU AI Act"
+    reference: "High-risk human-oversight duty (Art. 14) + transparency (Art. 50)"
+    evidence: "evidence://controls/CTL-HUMAN-OVERSIGHT-01/oversight-log"
+  - framework: "DORA"
+    reference: "Change controls; supervisory/audit access (Art. 30(3))"
+    evidence: "evidence://controls/CTL-HUMAN-OVERSIGHT-01/change-records"
+  - framework: "NIST AI RMF"
+    reference: "MANAGE function — response & oversight"
+    evidence: "evidence://controls/CTL-HUMAN-OVERSIGHT-01/manage-cadence"
+  - framework: "FINOS AI Governance Framework"
+    reference: "Human-in-the-loop control reference"
+    evidence: "evidence://controls/CTL-HUMAN-OVERSIGHT-01/finos-map"
+
+reuse:
+  reuses_existing: [sdlc-approval-gate, itsm-change-approval]
+  new_effort_required: false       # reuse-first: add new effort only for a proven gap
+
+verification:
+  method: gate-check
+  cadence: per-release
+  automated_check: >
+    Pipeline blocks promotion unless a signed human-oversight approval artefact exists
+    and is linked to the use-case ID.
