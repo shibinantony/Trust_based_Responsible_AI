@@ -12,7 +12,7 @@ auditable artefacts rather than static documents.
 
 | File | Purpose |
 |---|---|
-| [`trust-based-rai-governance-framework.md`](trust-based-rai-governance-framework.md) | The full reference framework (principles → operating model → architecture → regulatory mapping → roadmap → intake). |
+| [`trust-based-rai-governance-framework.md`](trust-based-rai-governance-framework.md) | The full reference framework (principles → operating model → architecture → regulatory mapping → ro[...] 
 | [`examples/use-case-classification.yaml`](examples/use-case-classification.yaml) | Governance-as-code example: a machine-readable AI use-case record + classification. |
 | [`examples/control-mapping.yaml`](examples/control-mapping.yaml) | Governance-as-code example: mapping a control to public frameworks with evidence. |
 
@@ -39,8 +39,7 @@ running AI on regulated banking platforms — as a starting scaffold to fork and
 
 ## Status & contributions
 
-Reference material, provided as-is. Issues and pull requests welcome. Add a `LICENSE` (MIT / CC BY 4.0
-recommended for reusable frameworks) before publishing.
+Reference material, provided as-is. Issues and pull requests welcome. The project is licensed under the MIT License — see [LICENSE](LICENSE).
 
 ---
 
