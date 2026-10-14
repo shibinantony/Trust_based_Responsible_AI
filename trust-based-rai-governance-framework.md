@@ -42,6 +42,12 @@ use case:
 A common set of **Responsible AI tenets** applies consistently, and the *depth* of assurance rises
 with the AI's intended purpose, decision influence and autonomy:
 
+**Trust is the governance objective; risk management is one of its essential mechanisms.** The EU AI
+Act establishes risk-based obligations, and the NIST AI RMF uses risk management to support the
+development of trustworthy and responsible AI. A trust-based approach therefore does not discard
+risk assessment: it makes risk decisions, accountability and evidence serve demonstrable trust.
+See the [research basis](#10-research-basis) for primary sources.
+
 | Tenet | Governing question |
 |---|---|
 | **Accountability** | Is there a named human owner for this AI's behaviour and outcomes? |
@@ -284,6 +290,34 @@ adoption curve — light and fast in build, deepening into continuous assurance 
 - [ ] Sequence delivery with the **framework → operationalise roadmap** (§6).
 - [ ] Lead with **native capability**, evaluate third-party tools by category (§7).
 - [ ] Run every change through the **5-step intake model** (§8.2).
+
+---
+
+## 10. Research basis
+
+The framework's trust-centered framing is a governance objective, not a claim that risk-based
+governance is obsolete. Primary sources show how the two fit together:
+
+- The **EU AI Act** imposes obligations according to AI-system risk categories and requires risk
+  management for high-risk systems. It is the binding EU regulation, not a general trust framework.
+- The **NIST AI RMF 1.0** describes a voluntary, risk-based approach for incorporating
+  trustworthiness considerations into the design, development, use and evaluation of AI systems.
+- The **OECD AI Principles** describe trustworthy AI through inclusive growth, human rights,
+  transparency, robustness, security and accountability.
+- **ISO/IEC 42001** specifies requirements for an AI management system; **ISO/IEC 23894** gives
+  guidance on AI-related risk management. They complement, rather than replace, applicable law.
+
+### Primary sources
+
+- [Regulation (EU) 2024/1689 (EU AI Act)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj)
+- [NIST AI Risk Management Framework (AI RMF 1.0), NIST AI 100-1](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+- [OECD Recommendation on Artificial Intelligence, OECD/LEGAL/0449](https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449)
+- [ISO/IEC 42001:2023, AI management systems](https://www.iso.org/standard/81230.html)
+- [ISO/IEC 23894:2023, AI risk management guidance](https://www.iso.org/standard/77304.html)
+- [Regulation (EU) 2022/2554 (DORA)](https://eur-lex.europa.eu/eli/reg/2022/2554/oj)
+- [Regulation (EU) 2016/679 (GDPR)](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
+- [Directive (EU) 2022/2555 (NIS2)](https://eur-lex.europa.eu/eli/dir/2022/2555/oj)
+- [FINOS AI Governance Framework](https://github.com/finos/ai-governance-framework)
 
 ---
 

@@ -22,6 +22,10 @@ auditable artefacts rather than static documents.
 > makes it explainable, controllable, resilient and evidence-ready for its board, its customers and
 > its supervisors.
 
+Trust is the governance objective, not a replacement for risk management. Regulations and standards
+such as the EU AI Act and NIST AI RMF use risk assessment and proportionate controls to help establish
+trustworthy AI. This framework makes that relationship explicit: risk is managed; trust is evidenced.
+
 Built on three design commitments:
 
 1. **Build the framework, then operationalise it** — governance defined from day one, light in build, deepening in run.
@@ -30,7 +34,7 @@ Built on three design commitments:
 
 ## Standards referenced (all public)
 
-ISO/IEC 42001 · ISO/IEC 23894 · ISO/IEC 27001 · EU AI Act · DORA · GDPR · NIS2 · NIST AI RMF · FINOS AI Governance Framework.
+ISO/IEC 42001 · ISO/IEC 23894 · ISO/IEC 27001 · EU AI Act · DORA · GDPR · NIS2 · NIST AI RMF · OECD AI Principles · FINOS AI Governance Framework. See the [research basis](trust-based-rai-governance-framework.md#10-research-basis) for primary-source links.
 
 ## Who it's for
 
